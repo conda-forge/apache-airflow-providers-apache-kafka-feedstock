@@ -6,7 +6,7 @@ package:
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name.replace('-', '_') }}-{{ version }}.tar.gz
+  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/apache_airflow_providers_apache_kafka-{{ version }}.tar.gz
   sha256: 8e9dc7285437e5c7dc25edcbc42a18a9ea31aaa96e6fc4eb0e7cc0e8130cefd0
 
 build:
@@ -16,28 +16,28 @@ build:
 
 requirements:
   host:
-    - python >=3.8
-    - setuptools >=67.2.0,<68.0.0
+    - python >=3.8,<4.dev0
+    - flit-core >=3.2,<4
     - pip
   run:
     - python >=3.8
-    - apache-airflow >=2.5.0
+    - apache-airflow >=2.6.0
     - asgiref
     - python-confluent-kafka >=1.8.2
 
 test:
   imports:
     - airflow.providers.apache.kafka
-    - airflow.providers.apache.kafka.hooks
   commands:
     - pip check
   requires:
     - pip
 
 about:
-  home: https://airflow.apache.org/
-  summary: Provider for Apache Airflow. Implements apache-airflow-providers-apache-kafka package
+  home: https://github.com/apache/airflow/
+  summary: Provider package apache-airflow-providers-apache-kafka for Apache Airflow
   license: Apache-2.0
+  license_file: airflow/providers/apache/kafka/LICENSE
   license_file:
     - LICENSE
     - NOTICE
