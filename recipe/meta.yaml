@@ -1,5 +1,5 @@
 {% set name = "apache-airflow-providers-apache-kafka" %}
-{% set version = "1.10.0" %}
+{% set version = "1.10.1" %}
 {% set python_min = "3.10" %}
 
 package:
@@ -8,7 +8,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/apache_airflow_providers_apache_kafka-{{ version }}.tar.gz
-  sha256: 47f3777c35e60922ed3a735337cff6665cca99352cf1b11ef0b767f5087f49db
+  sha256: fb69e81bde63b674fd59d2bc6817f97bfa95522458ae6de35a4ccf7456c8039e
 
 build:
   noarch: python
@@ -21,10 +21,10 @@ requirements:
     - flit-core ==3.12.0
     - pip
   run:
-    - python >={{ python_min }},<4.dev0
+    - python >={{ python_min }}
     - apache-airflow >=2.10.0
     - asgiref >=2.3.0
-    - python-confluent-kafka >=2.3.0
+    - python-confluent-kafka >=2.6.0
 
 test:
   imports:
