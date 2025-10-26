@@ -1,5 +1,5 @@
 {% set name = "apache-airflow-providers-apache-kafka" %}
-{% set version = "1.10.4" %}
+{% set version = "1.10.5" %}
 {% set python_min = "3.10" %}
 
 package:
@@ -8,7 +8,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/apache_airflow_providers_apache_kafka-{{ version }}.tar.gz
-  sha256: 1c3259ee645bbd9b1390d8119e3f797d87b8c22de629b5a042b683456e708e3e
+  sha256: b2de855bf19d37a20eb1b6a76333b4facf12e532937c4e4662f2815b842eb2c5
 
 build:
   noarch: python
