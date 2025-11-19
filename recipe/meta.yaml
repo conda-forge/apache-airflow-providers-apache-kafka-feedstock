@@ -1,6 +1,5 @@
 {% set name = "apache-airflow-providers-apache-kafka" %}
-{% set version = "1.10.5" %}
-{% set python_min = "3.10" %}
+{% set version = "1.10.6" %}
 
 package:
   name: {{ name|lower }}
@@ -8,7 +7,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/apache_airflow_providers_apache_kafka-{{ version }}.tar.gz
-  sha256: b2de855bf19d37a20eb1b6a76333b4facf12e532937c4e4662f2815b842eb2c5
+  sha256: b1f5ea49d81c46419e3f02ccb957af72105181571eb0db311c1af5e67ba22abf
 
 build:
   noarch: python
@@ -39,7 +38,9 @@ about:
   home: https://github.com/apache/airflow/
   summary: Provider package apache-airflow-providers-apache-kafka for Apache Airflow
   license: Apache-2.0
-  license_file: src/airflow/providers/apache/kafka/LICENSE
+  license_file:
+    - LICENSE
+    - NOTICE
   license_family: Apache
   doc_url: https://airflow.apache.org/docs/apache-airflow-providers-apache-kafka/stable/index.html
   dev_url: https://github.com/apache/airflow/
