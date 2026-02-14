@@ -1,6 +1,6 @@
 context:
   name: apache-airflow-providers-apache-kafka
-  version: "1.11.3"
+  version: 1.12.0
 
 package:
   name: ${{ name|lower }}
@@ -8,7 +8,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/${{ name[0] }}/${{ name }}/apache_airflow_providers_apache_kafka-${{ version }}.tar.gz
-  sha256: 8296680aecf425064eb6af695db2db693a8ea399fc6612752c19d8a894dcd9cb
+  sha256: 8d9ac6db7c18ddbae9c19470aa18cebe9cff077bdfc6eedaa7a49fbe108c7672
 
 build:
   noarch: python
@@ -26,7 +26,6 @@ requirements:
     - apache-airflow-providers-common-compat >=1.12.0
     - asgiref >=2.3.0
     - python-confluent-kafka >=2.6.0
-
 tests:
   - python:
       imports:
