@@ -1,6 +1,6 @@
 context:
   name: apache-airflow-providers-apache-kafka
-  version: 1.13.2
+  version: "1.13.2"
 
 package:
   name: ${{ name|lower }}
@@ -24,14 +24,19 @@ requirements:
     - python >=${{ python_min }}
     - apache-airflow >=2.11.0
     - apache-airflow-providers-common-compat >=1.12.0
-    - asgiref >=2.3.0
-    - python-confluent-kafka >=2.6.0
+    # more restrictive for python >=3.14
+    - asgiref >=3.11.1
+    # more restrictive for python >=3.14
+    - python-confluent-kafka >=2.13.2
+
 tests:
   - python:
       imports:
         - airflow.providers.apache.kafka
       pip_check: true
-      python_version: ${{ python_min }}.*
+      python_version:
+        - ${{ python_min }}.*
+        - "*"
 
 about:
   homepage: https://github.com/apache/airflow/
