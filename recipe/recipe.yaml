@@ -1,6 +1,6 @@
 context:
   name: apache-airflow-providers-apache-kafka
-  version: "1.14.0"
+  version: "1.15.0"
 
 package:
   name: ${{ name|lower }}
@@ -8,7 +8,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/${{ name[0] }}/${{ name }}/apache_airflow_providers_apache_kafka-${{ version }}.tar.gz
-  sha256: 612905747b4f3452bc648902a37ca097a5d626ea9ee583c262b4a9f1b824ae4d
+  sha256: aa570b063164b60986856c410c6870c142ebd46751140b7a68951d7baed2577b
 
 build:
   noarch: python
